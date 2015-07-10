@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+    <title>get set 使用方法</title>
+    <script type="text/javascript">
+        var People = {
+            save:function Name(){
+                var str = '';
+                for(p in People){
+                    str = str+p+"\n";
+                }
+                alert(str);
+//                alert('People.name:'+People.name);
+////                alert('People.prototype.name:'+People.prototype.name);
+//                alert('People.save.name:'+People.save.name);
+//                alert('People.save.prototype.name:'+People.save.prototype.name);
+            }
+        };
+        People.save();
+//        function Person() {
+//            var age = new Date().getFullYear() - 18;
+//            Object.defineProperty(this, "age", {
+//                get: function () { alert("内部存储数据为:" + age); return new Date().getFullYear() - age; },
+//                set: function (value) { age = value; }
+//            });
+//        }
+//        var me = new Person();
+//        me.age = 1989;
+//        me.age;
+
+//        var age = 18;
+//        var test = {
+//            get age() {
+//                return age;
+//            },
+//            set age(value) {
+//                if(value > 100) age = new Date().getFullYear() -value;
+//                else age = value;
+//            }
+//
+//        }
+//        test.age = 1989;
+//        alert(test.age);
+    </script>
+    </head>
+</html>

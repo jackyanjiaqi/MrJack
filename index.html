@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
+            user-scalable=no, target-densitydpi=device-dpi"/>
+
+    <script src="js/framework/ObjectPool.js"></script>
+    <script src="js/framework/ArrayPool.js"></script>
+
+
+    <script src="js/util/ImageManager.js"></script>
+    <script src="js/util/xstats.js"></script>
+    <script src="js/util/Logger.js"></script>
+    <script src="js/util/global_controller.js"></script>
+    <script src="js/util/utils.js"></script>
+
+    <script src="js/AI/BaseAI.js"></script>
+    <script src="js/AI/AttackFirstAI.js"></script>
+
+    <script src="js/util/ImageUtil.js"></script>
+    <script src="js/game_engine/Indicator.js"></script>
+    <script src="js/game_engine/IndicatorManager.js"></script>
+    <script src="js/game_engine/RenderLayerIndicatorsDelegate.js"></script>
+    <script src="js/game_engine/TouchDelegate.js"></script>
+    <script src="js/game_engine/TextView.js"></script>
+
+    <script src="js/input/EventEmitter.js"></script>
+    <script src="js/input/InputHandlerBase.js"></script>
+    <script src="js/input/MouseInputHandler.js"></script>
+    <script src="js/input/TouchInputHandler.js"></script>
+
+    <!-- action系统 -->
+    <script src="js/heros/BaseHeroAction.js"></script>
+    <script src="js/heros/MultipleStepBaseAction.js"></script>
+    <script src="js/heros/SpiderManActionDeleted.js"></script>
+    <script src="js/heros/AmericanCaptainAction.js"></script>
+    <script src="js/heros/ArrowManAction.js"></script>
+    <script src="js/heros/SpiderManAction.js"></script>
+    <script src="js/heros/ThunderManAction.js"></script>
+    <script src="js/heros/ThunderManTransferedAction.js"></script>
+
+    <script src="Point.js"></script>
+    <script src="Direction.js"></script>
+    <script src="Hexagon.js"></script>
+    <script src="HexagonTreeNode.js"></script>
+    <script src="js/game_engine/SpriteSheet.js"></script>
+
+    <!-- framework核心框架工具 -->
+    <script src="js/framework/GameRoleManager.js"></script>
+    <script src="js/framework/UserActionManager.js"></script>
+    <script src="js/framework/RenderProxy.js"></script>
+    <script src="js/framework/BGGridManager.js"></script>
+    <script src="js/framework/LayerManager.js"></script>
+    <script src="js/framework/RenderLayerManager.js"></script>
+    <script src="js/framework/Scene.js"></script>
+    <script src="js/framework/Stage.js"></script>
+
+    <!-- effect系统 -->
+    <script src="js/effect/EffectManager.js"></script>
+    <script src="js/effect/BaseEffect.js"></script>
+    <script src="js/effect/BlockEffect.js"></script>
+    <script src="js/effect/ShieldEffect.js"></script>
+    <script src="js/effect/WebEffect.js"></script>
+    <script src="js/effect/AimEffect.js"></script>
+    <script src="js/effect/HammerEffect.js"></script>
+    <script src="js/effect/TestEndGameEffect.js"></script>
+
+    <script src="UserInterface.js"></script>
+    <script src="js/editor/BaseSceneConfig.js"></script>
+    <script src="js/editor/IndicatorManagerTestScene.js"></script>
+    <script src="js/editor/LevelResourcePreloadScene.js"></script>
+    <script src="js/editor/BGGridTouchableScene.js"></script>
+    <script src="js/editor/MissionSelectScene.js"></script>
+    <script src="js/editor/EffectManagerTestScene.js"></script>
+    <script src="js/editor/IndicatorTestScene.js"></script>
+    <script src="js/editor/LoadingScene.js"></script>
+    <script src="js/editor/StoryBoardMultipleScene.js"></script>
+    <script src="js/editor/GameBoardInteractScene.js"></script>
+    <script src="js/editor/TextViewTestScene.js"></script>
+    <script src="js/editor/GameMainScene.js"></script>
+    <script src="js/framework/LevelEditor.js"></script>
+    <script src="js/Game.js"></script>
+
+    <style>
+
+        html,body{
+            overflow: hidden;
+            width:100%;
+            height:100%;
+            margin:0;
+            border:0;
+            /*background: url("img/bg_landscape.jpg") repeat center;*/
+        }
+
+        .loadingTest{
+            text-align: center;
+            font-weight: bold;
+            font-size: x-large;
+            color: white;
+            position: absolute;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+
+        .xstats{
+            position:absolute;
+            top:0;
+            left:0;
+        }
+        .log{
+            position: absolute;
+            visibility: hidden;
+            font-size: 15px;
+            width: 30%;
+            height: 50%;
+            top:0;
+            right:0;
+        }
+    </style>
+    <script>
+//        function repaint(){
+//            if(!ctx){
+//                return;
+//            }
+//            //清除背景
+//            ctx.fillStyle="yellow";
+//            ctx.fillRect(0,0,canvas.width,canvas.height);
+//
+//            reorient();
+//            ctx.fillStyle = "darkgreen";
+//            ctx.fillRect(10,10,250,30);
+//
+//
+//        }
+//        function reorient(){
+//            var angle = window.orientation;
+//            if(angle){
+//                var rot = -Math.PI*(angle/180);
+//                ctx.translate(angle == -90?canvas.width:0,angle==90?canvas.height:0);
+//                ctx.rotate(rot);
+//            }
+//        }
+    </script>
+    <title>H5BG_ENGINE</title>
+</head>
+<body>
+    <textarea class="log" cols="30" rows="10" ></textarea>
+    <canvas id="mainCanvas" width="10" height="10"></canvas>
+</body>
+</html>
